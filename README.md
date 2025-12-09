@@ -4,7 +4,23 @@ A machine learning project that implements a Decision Tree-based algorithm for d
 
 ## 📋 Project Overview
 
-This project implements a complete machine learning pipeline for DDoS attack detection using a CART Decision Tree classifier. It includes data preprocessing, feature selection, model training, cross-validation, and comprehensive evaluation metrics.
+This project builds a full machine learning pipeline to detect Distributed Denial of Service (DDoS) attacks in network traffic. Using the CIC-IDS2017 dataset and a Decision Tree classifier, the model achieves near-perfect performance while remaining lightweight and fully interpretable. The pipeline includes preprocessing, Chi-square–based feature selection, cross-validation, evaluation, and model saving.
+
+## 📈 Key Results
+Using CIC-IDS2017-based flows, the trained model achieved:
+
+- **Accuracy:** 99.95%
+- **Precision:** 99.98%
+- **Recall:** 99.93%
+- **F1-Score:** 99.95%
+
+Across evaluation, the model produced:
+- Only **5 false positives**
+- Only **18 false negatives**
+- Over **45,000 correctly classified samples**
+
+These results validate the model's reliability for intrusion detection tasks.
+
 
 ## ✨ Features
 
@@ -21,7 +37,7 @@ This project implements a complete machine learning pipeline for DDoS attack det
 1. Clone this repository:
 ```bash
 git clone <your-repo-url>
-cd pythonProject2
+cd ddos-detection-decision-tree
 ```
 
 2. Install required dependencies:
@@ -34,6 +50,17 @@ pip install -r requirements.txt
 ```
 
 ## 📊 Usage
+
+### Sample Output (Abbreviated)
+=== Evaluation on Test Set ===
+Accuracy: 0.9995
+Precision: 0.9998
+Recall: 0.9993
+F1-Score: 0.9995
+
+Confusion Matrix:
+TN = 19539   FP = 5
+FN = 18      TP = 25587
 
 ### Basic Usage
 
@@ -66,7 +93,6 @@ pythonProject2/
 ├── .gitignore               # Git ignore rules
 ├── PSEUDOCODE.md            # Algorithm pseudocode
 ├── EVALUATION_FORMULAS.md   # Mathematical formulas
-├── PROFESSOR_SUMMARY.md     # Project summary
 └── [data files]             # Dataset files (not tracked in git)
 ```
 
@@ -106,24 +132,6 @@ After running the script, the following files are generated:
 - `ddos_decision_tree.joblib`: Trained model and preprocessing pipeline
 - `confusion_matrix.png`: Confusion matrix visualization
 
-## 📚 Documentation
-
-Additional documentation files:
-- `PSEUDOCODE.md`: Complete algorithm pseudocode
-- `EVALUATION_FORMULAS.md`: Mathematical formulas and examples
-- `PROFESSOR_SUMMARY.md`: Detailed project summary
-- `REAL_DATASET_GUIDE.md`: Guide for using real datasets
-- `PRESENTATION_GUIDE.md`: Presentation tips and explanations
-
-## 🎓 Educational Value
-
-This project demonstrates:
-- Data preprocessing and feature engineering
-- Machine learning model training and evaluation
-- Cross-validation for robust performance estimation
-- Model interpretation and visualization
-- Best practices in ML project organization
-
 ## 🔬 Requirements
 
 - Python 3.7+
@@ -135,6 +143,14 @@ This project demonstrates:
 
 See `requirements.txt` for specific versions.
 
+## 🧠 Skills Demonstrated
+- Data preprocessing and feature engineering
+- Statistical feature selection (Chi-square)
+- Binary classification pipeline design
+- Cross-validation and performance optimization
+- Model serialization and reproducibility practices
+- Clear ML documentation and reporting  
+
 ## 📄 License
 
 This project is part of a college assignment. Please use responsibly and cite appropriately if used for academic purposes.
@@ -143,7 +159,4 @@ This project is part of a college assignment. Please use responsibly and cite ap
 
 This is an academic project. For questions or suggestions, please open an issue.
 
-## 📧 Contact
-
-For questions about this project, please refer to the documentation files or open an issue.
 
