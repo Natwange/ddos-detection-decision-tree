@@ -70,3 +70,7 @@ desktop.ini
 *.temp
 ~*
 
+# Documentation files to exclude from repository
+PRESENTATION_GUIDE.md
+PROFESSOR_SUMMARY.md
+
