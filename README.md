@@ -92,7 +92,6 @@ pythonProject2/
 ├── README.md                 # This file
 ├── .gitignore               # Git ignore rules
 ├── PSEUDOCODE.md            # Algorithm pseudocode
-├── EVALUATION_FORMULAS.md   # Mathematical formulas
 └── [data files]             # Dataset files (not tracked in git)
 ```
 
